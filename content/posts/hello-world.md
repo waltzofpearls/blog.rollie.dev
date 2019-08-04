@@ -1,7 +1,7 @@
 ---
 title: "Hello World"
 date: 2019-08-04T03:20:05-07:00
-tags: []
+tags: ["Random Things"]
 draft: false
 ---
 

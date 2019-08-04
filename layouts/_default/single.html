@@ -3,9 +3,9 @@
   {{ .Title }} &ndash; {{ .Site.Title }}
 {{ end }}
 {{ define "main" }}
-  <main class="blog">
+  <main class="blog single">
     <article>
-      <h3>{{ .Title }}</h3>
+      <h2>{{ .Title }}</h2>
       <time>{{ .Date.Format "Mon Jan 2, 2006" }}</time>
       <section class="content">
         {{ .Content }}
@@ -16,17 +16,17 @@
         {{ with .Params.tags }}
           <ul>
             {{ range . }}
-              <li><a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a></li>
+              <li><a href="{{ "tags" | absURL }}/{{ . | urlize }}" rel="internal">{{ . }}</a></li>
             {{ end }}
           </ul>
         {{ end }}
       </div>
       <div class="nav">
         {{ with .PrevInSection }}
-          <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+          <a class="previous" href="{{.Permalink}}" rel="internal">&lt; {{.Title}}</a>
         {{ end }}
         {{ with .NextInSection }}
-          <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+          <a class="next" href="{{.Permalink}}" rel="internal">{{.Title}} &gt;</a>
         {{ end }}
       </div>
     </section>

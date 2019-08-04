@@ -1,6 +1,10 @@
 baseURL = "https://blog.rollie.dev/"
 languageCode = "en-us"
 title = "Rollie Ma - Polyglot Developer from Vancouver, BC"
+paginate = 5
+
+[taxonomies]
+  tag = "tags"
 
 [permalinks]
   blog = "/:filename/"

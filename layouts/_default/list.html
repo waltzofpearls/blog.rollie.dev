@@ -1,14 +1,18 @@
 {{ define "main" }}
-  <main class="blog">
-    <h3>Some random thoughts</h3>
-    {{ range .Pages.ByPublishDate }}
-      <article>
-        <h4><a href="{{ .Permalink }}" rel="internal">{{ .Title }}</a></h4>
-        <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
-        <section class="content">
-          {{ .Summary }}
-        </section>
-      </article>
+  <main class="blog list">
+    <h2>Some random thoughts</h2>
+    {{ range .Paginator.Pages }}
+      {{ if not .Params.draft }}
+        <article>
+          <h3><a href="{{ .Permalink }}" rel="internal">{{ .Title }}</a></h3>
+          <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+          <section class="content">
+            {{ .Summary }}
+            <a href="{{ .Permalink }}" rel="internal">Read more &gt;</a>
+          </section>
+        </article>
+      {{ end }}
     {{ end }}
+    {{ template "_internal/pagination.html" . }}
   </main>
 {{ end }}
