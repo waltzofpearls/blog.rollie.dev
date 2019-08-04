@@ -1,0 +1,9 @@
+{{ define "main" }}
+  <h2>Some random thoughts</h2>
+  {{ range .Pages }}
+    <article>
+      <h3><a href="{{ .Permalink }}" rel="internal">{{ .Date.Format "2006-01-02" }} | {{ .Title }}</a></h3>
+      {{ .Content }}
+    </article>
+  {{ end }}
+{{ end }}

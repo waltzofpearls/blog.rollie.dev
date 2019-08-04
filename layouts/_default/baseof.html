@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ block "title" . }}
+      {{ .Site.Title }}
+    {{ end }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="{{ .Site.Params.description }}">
+    <meta property="og:title" content="{{ .Site.Title }}">
+    <meta property="og:description" content="{{ .Site.Params.description }}">
+    <meta property="og:image" content="{{ .Site.Params.image }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ .Site.Params.url }}">
+    <meta name="twitter:card" content="{{ .Site.Params.url }}">
+    <meta name="twitter:description" content="{{ .Site.Params.description }}">
+    <meta name="twitter:image" content="{{ .Site.Params.image }}">
+    <meta name="twitter:title" content="{{ .Site.Title }}">
+    <link rel="author" href="https://github.com/waltzofpearls">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <link rel="shortcut icon" href="https://rollie.dev/static/images/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="https://rollie.dev/static/stylesheets/dist/style.css">
+  </head>
+  <body>
+    <header role="banner">
+      <nav class="navbar navbar-default navbar-fixed-top tetris-nav" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".tetris-navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand">RM</div>
+            <div class="small-logo-container">
+              <a class="small-logo icon-48 icon-logo-48" href="/"></a>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse tetris-navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="https://rollie.dev/" rel="internal">0: "Home"</a></li>
+              <li><a href="https://rollie.dev/projects" rel="internal">1: "Projects"</a></li>
+              <li><a href="https://rollie.dev/resume" rel="internal">2: "Resume"</a></li>
+              <li><a href="https://blog.rollie.dev/" rel="internal">3: "Blog"</a></li>
+            </ul>
+            <div class="tetris-social-network">
+              <a class="icon-36 icon-github-36" href="https://github.com/waltzofpearls" rel="external"></a>
+              <a class="icon-36 icon-facebook-36" href="https://facebook.com/rolli3ma" rel="external"></a>
+              <a class="icon-36 icon-linkedin-36" href="https://linkedin.com/in/rolli3ma" rel="external"></a>
+              <a class="icon-36 icon-twitter-36" href="https://twitter.com/rolli3ma" rel="external"></a>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="row big-logo-row">
+          <div class="big-logo-container">
+            <div class="big-logo col-xs-2">
+              <a href="/">
+                <span class="logo logo-150x150"></span>
+                <span class="logo logo-120x120"></span>
+                <span class="logo logo-80x80"></span>
+                <span class="logo logo-50x50"></span>
+              </a>
+            </div>
+            <div class="big-text col-xs-10">
+              <h1 class="long">let rollie_ma = "dev"</h1>
+              <h1 class="medium">let rollie = "dev"</h1>
+              <h1 class="short">let rm = "dev"</h1>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      {{ block "main" . }}
+      {{ end }}
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-5">
+            &copy; {{ now.Format "2006" }} Rollie Ma
+            <br>
+            Powered by <a href="https://golang.org/" rel="external">Golang</a>.
+            Source code hosted on <a href="https://github.com/waltzofpearls/rollie.dev" rel="external">Github</a>.
+          </div>
+          <div class="col-xs-7 text-right">
+            rollie {at} rollie {dot} dev
+            <br>
+            rollie {at} rolli3 {dot} net
+            <br>
+            rollie {at} topbasslabs {dot} com
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>var require = function(name) { return window[name]; };</script>
+    <script data-main="https://rollie.dev/static/javascripts/dist/main.min" src="https://rollie.dev/static/javascripts/dist/require.min.js"></script>
+  </body>
+</html>

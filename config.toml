@@ -1,0 +1,11 @@
+baseURL = "https://blog.rollie.dev/"
+languageCode = "en-us"
+title = "Rollie Ma - Polyglot Developer from Vancouver, BC"
+
+[permalinks]
+  blog = "/:filename/"
+
+[params]
+  url = "https://rollie.dev"
+  image = "https://rollie.dev/images/logos/logo-120x120.png"
+  description = "Rollie Ma - Polyglot Developer from Vancouver, BC"
