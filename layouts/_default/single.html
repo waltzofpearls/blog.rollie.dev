@@ -3,6 +3,32 @@
   {{ .Title }} &ndash; {{ .Site.Title }}
 {{ end }}
 {{ define "main" }}
-  <h2>{{ .Title }}</h2>
-  {{ .Content }}
+  <main class="blog">
+    <article>
+      <h3>{{ .Title }}</h3>
+      <time>{{ .Date.Format "Mon Jan 2, 2006" }}</time>
+      <section class="content">
+        {{ .Content }}
+      </section>
+    </article>
+    <section class="meta">
+      <div class="tags">
+        {{ with .Params.tags }}
+          <ul>
+            {{ range . }}
+              <li><a href="{{ "tags" | absURL }}{{ . | urlize }}">{{ . }}</a></li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </div>
+      <div class="nav">
+        {{ with .PrevInSection }}
+          <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+        {{ end }}
+        {{ with .NextInSection }}
+          <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+        {{ end }}
+      </div>
+    </section>
+  </main>
 {{ end }}

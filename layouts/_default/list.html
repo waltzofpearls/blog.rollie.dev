@@ -1,9 +1,14 @@
 {{ define "main" }}
-  <h2>Some random thoughts</h2>
-  {{ range .Pages }}
-    <article>
-      <h3><a href="{{ .Permalink }}" rel="internal">{{ .Date.Format "2006-01-02" }} | {{ .Title }}</a></h3>
-      {{ .Content }}
-    </article>
-  {{ end }}
+  <main class="blog">
+    <h3>Some random thoughts</h3>
+    {{ range .Pages.ByPublishDate }}
+      <article>
+        <h4><a href="{{ .Permalink }}" rel="internal">{{ .Title }}</a></h4>
+        <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+        <section class="content">
+          {{ .Summary }}
+        </section>
+      </article>
+    {{ end }}
+  </main>
 {{ end }}
