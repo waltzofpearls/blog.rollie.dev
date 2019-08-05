@@ -2,6 +2,7 @@ baseURL = "https://blog.rollie.dev/"
 languageCode = "en-us"
 title = "Rollie Ma - Polyglot Developer from Vancouver, BC"
 paginate = 5
+googleAnalytics = "UA-64152368-2"
 
 [taxonomies]
   tag = "tags"
@@ -13,3 +14,16 @@ paginate = 5
   url = "https://rollie.dev"
   image = "https://rollie.dev/images/logos/logo-120x120.png"
   description = "Rollie Ma - Polyglot Developer from Vancouver, BC"
+
+[related]
+  threshold = 75
+  includeNewer = true
+  toLower = false
+
+  [[related.indices]]
+    name = "keywords"
+    weight = 100
+
+  [[related.indices]]
+    name = "tags"
+    weight = 100

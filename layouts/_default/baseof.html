@@ -16,6 +16,9 @@
     <meta name="twitter:description" content="{{ .Site.Params.description }}">
     <meta name="twitter:image" content="{{ .Site.Params.image }}">
     <meta name="twitter:title" content="{{ .Site.Title }}">
+    {{ range .AlternativeOutputFormats -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
     <link rel="author" href="https://github.com/waltzofpearls">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
     <link rel="shortcut icon" href="https://rollie.dev/static/images/favicon.ico" type="image/vnd.microsoft.icon">

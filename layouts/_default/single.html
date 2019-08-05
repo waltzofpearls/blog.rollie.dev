@@ -30,5 +30,16 @@
         {{ end }}
       </div>
     </section>
+    {{ $related := .Site.RegularPages.Related . | first 5 }}
+    {{ with $related }}
+      <section class="related">
+        <h4 class="well well-sm">Related articles</h4>
+        <ul>
+          {{ range . }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </section>
+    {{ end }}
   </main>
 {{ end }}
