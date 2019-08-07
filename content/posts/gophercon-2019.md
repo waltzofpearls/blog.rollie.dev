@@ -3,6 +3,15 @@ title: "GopherCon 2019"
 date: 2019-08-04T13:41:33-07:00
 tags: ["Tech", "Go", "Programming Language", "San Diego"]
 draft: false
+
+ogURL: https://blog.rollie.dev/posts/gophercon-2019/
+image: https://blog.rollie.dev/images/gophercon-2019/san-diego.jpg
+description: >
+  A week ago (July 25 - July 27) I went to the beautiful city of San Diego and attended GopherCon 2019.
+  For Go developers in North America, GopherCon is probably the most exciting and biggest Go meetup that
+  takes place annually. In two days, gophers around the world gathering together, networking, sharing
+  their knowledge, excitement and feedback about the Go programming language. It was an event I had been
+  eagerly anticipating since the beginning of the year.
 ---
 
 <center>

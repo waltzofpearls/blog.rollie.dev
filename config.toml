@@ -11,9 +11,10 @@ googleAnalytics = "UA-64152368-2"
   blog = "/:filename/"
 
 [params]
-  url = "https://rollie.dev"
-  image = "https://rollie.dev/images/logos/logo-120x120.png"
-  description = "Rollie Ma - Polyglot Developer from Vancouver, BC"
+  url = "https://blog.rollie.dev"
+  image = "https://rollie.dev/static/images/logos/logo-150x150.png"
+  description = "Some random thoughts"
+  twitter = "@rolli3ma"
 
 [related]
   threshold = 75
