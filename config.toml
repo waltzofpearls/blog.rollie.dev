@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "Rollie Ma - Polyglot Developer from Vancouver, BC"
 paginate = 5
 googleAnalytics = "UA-64152368-2"
+pygmentsUseClasses = true
+PygmentsCodeFences = true
 
 [taxonomies]
   tag = "tags"

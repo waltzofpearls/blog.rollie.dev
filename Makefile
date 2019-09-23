@@ -10,3 +10,7 @@ new:
 
 run:
 	hugo server -D
+
+css:
+	mkdir -p static/stylesheets
+	hugo gen chromastyles --style=solarized-dark > static/stylesheets/syntax.css
