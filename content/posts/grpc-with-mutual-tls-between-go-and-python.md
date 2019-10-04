@@ -1,6 +1,6 @@
 ---
 title: "gRPC with Mutual TLS Between Go and Python"
-date: 2019-09-23T02:00:07-07:00
+date: 2019-09-25T07:00:07-07:00
 tags: ["Tech", "gRPC", "Go", "Python", "SSL", "TLS"]
 draft: false
 
