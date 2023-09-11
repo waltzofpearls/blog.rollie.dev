@@ -19,61 +19,54 @@
       {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
     {{ end -}}
     <link rel="author" href="https://github.com/waltzofpearls">
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-    <link rel="shortcut icon" href="https://rollie.dev/static/images/favicon.ico" type="image/vnd.microsoft.icon">
-    <link rel="stylesheet" href="https://rollie.dev/static/stylesheets/dist/style.css">
-    <link rel="stylesheet" href="/stylesheets/syntax.css">
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAD/46v//9mM//fYoP/VqH3/0qJ1//LSof//2o7//Nud/9qxh//RoHD/3LeT/9Ojdf/VqHz/27SO/9Cfb//duZb//9mM///MYv/1yX3/xYhM/8GAQf/twX3//8xk//vOeP/MlFr/v3s6/8+cav/BgEL/xIdL/82XZP+/ezn/0J9v//fYoP/1yX3/8M2V/9Kic//PnGv/8c6a///Xhv/92pb/4LaD/9ilbP/hu5D/2alx/9utef/asIf/zZdk/9u0jv/VqHz/x4tQ/9Wnev/Lk13/x4xT/+7Hiv//0XL//9eI///ajv//0XP//92X///Uff//1H7/3rKA/8aKT//VqHz/1ah7/9W2mf/Sxrr/0qV6/8OESP/txIP//9Bs//ndo//f1cD/+96j/+7duv/n17j//uCk/9jLvP/VtJX/1KV5/+LAn//FurD/jI6P/+zVsP/uxIP/7Mqb/+O1ev/ey7L/jY+S/+XWwf+9tq7/qaik//rrz/+UlZb/08i2//XXqP/Yq3//wLGj/4iJi//226L//9Bq/+G0eP/AfT7/z7SZ/4uNj//Zwqz/tqyj/6eln//658H/kJCR/9bJrf//35f/4LuU/8O3qv+IiYv/9t6t///Wf//owpD/zZVg/9O8pf+LjY7/3Mm2/7evp/+npaD/+unJ/5CQkf/VybP//+Cl///hqP/OxLH/foCC/+zdvf//3ZP/5t3N/93Qw//by7v/hYaH/9zPw/+6s63/m5qY//ft2P+RkZH/ybqr/9+4kf//4Jr/0MWt/2prbf+koZz/9OPC/6yqpv+opKD/3s/C/3h4ef+ysK//t7W0/3Z2dv/U0s//j5CQ/8a0ov/Wp3r/9tir/83Etf+GiIn/oKGi/4yNkP96env/qqik/+Xcz/+Ki43/mZqc/3l6ev+bnJ3/jo+Q/31+f//Uw7L/37qX/9Smev/Us5P/2cu5//fjuf/XyrH/x8Cz/+bWtP/64rD/5Ne+/+3dvf/Mw7b/2sCn/8+8qv/Lv7P/0KBy/9KidP/VqHz/xolO/96xff//1H7//9aA///hoP//03j//9eH///Zi///03f/8M2U/8mOV//OmWX/1ql9/8WITP/VqHz/27SO/82XZP/asIf/2615/9mpcf/hu4//2KVs/+C2hP/92Zb//9eF//zcoP/1y4P/9c6J/962if/Nl2T/27SO/9Cfb/+/ezn/zZdk/8SHS//BgEL/z5xq/797Ov/MlFr/+854///LY///2In//85p///QcP/XpWv/vno4/9Cfb//duZb/0J9v/9u0jv/VqHz/06N1/9y3k//RoHD/2rGH//zbnf//2Y3//+Kp///akf//3Jf/4r2T/9Cebv/duZb/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/main.css">
   </head>
   <body>
-    <header role="banner">
-      <nav class="navbar navbar-default navbar-fixed-top tetris-nav" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".tetris-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <div class="navbar-brand">RM</div>
-            <div class="small-logo-container">
-              <a class="small-logo icon-48 icon-logo-48" href="/"></a>
-            </div>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top tetris-nav">
+        <div class="container navbar-header">
+          <div class="navbar-brand">RM</div>
+          <div class="small-logo-container">
+            <a class="small-logo icon-48 icon-logo-48" href="/">&nbsp;</a>
           </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".tetris-navbar-collapse" aria-controls="tetris-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
           <div class="collapse navbar-collapse tetris-navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="https://rollie.dev/" rel="internal">0: "Home"</a></li>
-              <li><a href="https://rollie.dev/projects" rel="internal">1: "Projects"</a></li>
-              <li><a href="https://rollie.dev/resume" rel="internal">2: "Resume"</a></li>
-              <li><a href="https://blog.rollie.dev/" rel="internal">3: "Blog"</a></li>
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="https://rollie.dev/">0: "Home"</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://rollie.dev/#projects">1: "Projects"</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://rollie.dev/#resume">2: "Resume"</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://blog.rollie.dev/">3: "Blog"</a></li>
             </ul>
-            <div class="tetris-social-network">
-              <a class="icon-36 icon-github-36" href="https://github.com/waltzofpearls" rel="external"></a>
-              <a class="icon-36 icon-facebook-36" href="https://facebook.com/rolli3ma" rel="external"></a>
-              <a class="icon-36 icon-linkedin-36" href="https://linkedin.com/in/rolli3ma" rel="external"></a>
-              <a class="icon-36 icon-twitter-36" href="https://twitter.com/rolli3ma" rel="external"></a>
+            <div class="tetris-social-network ms-auto">
+              <a class="icon-36 icon-github-36" href="https://github.com/waltzofpearls" target="_blank">&nbsp;</a>
+              <a class="icon-36 icon-facebook-36" href="https://facebook.com/rolli3ma" target="_blank">&nbsp;</a>
+              <a class="icon-36 icon-linkedin-36" href="https://linkedin.com/in/rolli3ma" target="_blank">&nbsp;</a>
+              <a class="icon-36 icon-twitter-36" href="https://twitter.com/rolli3ma" target="_blank">&nbsp;</a>
             </div>
-            <div class="clearfix"></div>
           </div>
         </div>
       </nav>
       <div class="container">
         <div class="row big-logo-row">
-          <div class="big-logo-container">
-            <div class="big-logo col-xs-2">
-              <a href="/">
-                <span class="logo logo-150x150"></span>
-                <span class="logo logo-120x120"></span>
-                <span class="logo logo-80x80"></span>
-                <span class="logo logo-50x50"></span>
-              </a>
-            </div>
-            <div class="big-text col-xs-10">
-              <h1 class="long">let rollie_ma = "dev"</h1>
-              <h1 class="medium">let rollie = "dev"</h1>
-              <h1 class="short">let rm = "dev"</h1>
-            </div>
-            <div class="clearfix"></div>
+          <!-- Logo container -->
+          <div class="col-2 ps-0">
+            <a href="/">
+              <span class="logo logo-150x150"></span>
+              <span class="logo logo-120x120"></span>
+              <span class="logo logo-80x80"></span>
+              <span class="logo logo-50x50"></span>
+            </a>
+          </div>
+          <!-- Text container -->
+          <div class="col-10 pe-0">
+            <h1 class="long">let rollie_ma = "dev"</h1>
+            <h1 class="medium">let rollie = "dev"</h1>
+            <h1 class="short">let rm = "dev"</h1>
           </div>
         </div>
       </div>
@@ -85,23 +78,24 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-xs-5">
+          <div class="col-5">
             &copy; {{ now.Format "2006" }} Rollie Ma
             <br>
-            Powered by <a href="https://gohugo.io/" rel="external">Hugo</a>.
-            Source code hosted on <a href="https://github.com/waltzofpearls/blog.rollie.dev" rel="external">Github</a>.
+            Built with <a href="https://svelte.dev/" target="_blank">Svelte</a> + <a href="https://www.rust-lang.org/" target="_blank">Rust</a>
+            <br>
+            Source code on <a href="https://github.com/waltzofpearls/rollie.dev" target="_blank">GitHub</a>
           </div>
-          <div class="col-xs-7 text-right">
-            rollie {at} rollie {dot} dev
+          <div class="col-7 text-end">
+            rollie (at) rollie (dot) dev
             <br>
-            rollie {at} rolli3 {dot} net
+            rollie (at) topbass (dot) studio
             <br>
-            rollie {at} topbasslabs {dot} com
+            rollie (at) topbasslabs (dot) com
           </div>
         </div>
       </div>
     </footer>
-    <script>var require = function(name) { return window[name]; };</script>
-    <script data-main="https://rollie.dev/static/javascripts/dist/main.min" src="https://rollie.dev/static/javascripts/dist/require.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+    <script src="/javascripts/main.js"></script>
   </body>
 </html>

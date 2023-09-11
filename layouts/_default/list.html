@@ -1,6 +1,6 @@
 {{ define "main" }}
   <main class="blog list">
-    <h2>Some random thoughts</h2>
+    <h1>Some random thoughts</h1>
     {{ range .Paginator.Pages }}
       {{ if not .Params.draft }}
         <article>
