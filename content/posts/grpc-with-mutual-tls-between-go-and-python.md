@@ -15,7 +15,9 @@ description: >
 ---
 
 <center>
+
   ![Microservices](/images/grpc-over-tls-between-go-and-python/microservices.jpg)
+
 </center>
 
 **TL;DR**

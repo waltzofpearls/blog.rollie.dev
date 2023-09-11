@@ -15,10 +15,12 @@ description: >
 ---
 
 <center>
+
   ![San Diego](/images/gophercon-2019/san-diego.jpg)
   <span style="font-size:5em;">&nbsp;+&nbsp;</span>
   ![GopherCon 2019](/images/gophercon-2019/gophercon.png)
   <span style="font-size:5em;">&nbsp;=&nbsp;<3</span>
+
 </center>
 
 **TL;DR** Some liveblogs from the conf if only the sessions interest you:

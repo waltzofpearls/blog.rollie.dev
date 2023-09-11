@@ -1,0 +1,121 @@
+@import url('/stylesheets/syntax.css');
+@import url('/stylesheets/sprites.css');
+@import url('/stylesheets/blog.css');
+
+:root {
+  --fixed-top-height: 50px;
+}
+
+h1, h2, h3, h4 {
+  a .badge {
+    vertical-align: top;
+  }
+}
+
+@font-face {
+  font-family: 'Consolas';
+  src: url('/fonts/consolas.eot');
+  src: url('/fonts/consolas-iefix.eot') format('embedded-opentype'),
+  url('/fonts/consolas.woff2') format('woff2'),
+  url('/fonts/consolas.woff') format('woff'),
+  url('/fonts/consolas.ttf') format('truetype'),
+  url('/fonts/consolas.svg') format('svg');
+}
+
+.small-logo-container {
+  padding-top: var(--fixed-top-height);
+  width: 0;
+  height: var(--fixed-top-height);
+  overflow: hidden;
+  transition: width .5s;
+  -webkit-transition: width .5s;
+
+  .small-logo {
+    display: block;
+    margin: 1px;
+  }
+
+  @media (max-width: 767px) {
+    width: auto !important;
+  }
+}
+
+.row.big-logo-row {
+  margin-top: calc(var(--fixed-top-height) + 8px + 8px);
+  transition: padding-top .5s;
+  -webkit-transition: padding-top .5s;
+  padding: 15px;
+
+  .logo {
+    display: none;
+  }
+
+  h1 {
+    margin: 0;
+    text-align: right;
+    font-family: Consolas, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    &.long { display: block; }
+    &.medium { display: none; }
+    &.short { display: none; }
+  }
+
+  /* smartphone */
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 2em;
+      line-height: 50px;
+      &.long { display: none; }
+      &.medium { display: none; }
+      &.short { display: block; }
+    }
+    .logo-50x50 { display: block; }
+  }
+  /* tablet */
+  @media (min-width: 768px) and (max-width: 991px) {
+    h1 {
+      font-size: 2.75em;
+      line-height: 80px;
+      &.long { display: none; }
+      &.medium { display: block; }
+      &.short { display: none; }
+    }
+    .logo-80x80 { display: block; }
+  }
+  /* desktop */
+  @media (min-width: 992px) and (max-width: 1199px) {
+    h1 {
+      font-size: 3.75em;
+      line-height: 120px;
+    }
+    .logo-120x120 { display: block; }
+  }
+  /* large desktop */
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 4.75em;
+      line-height: 150px;
+    }
+    .logo-150x150 { display: block; }
+  }
+}
+
+.tetris-social-network {
+  float: right;
+
+  a {
+    margin: 7px 2px;
+    float: left;
+  }
+
+  /* smartphone */
+  @media (max-width: 767px) {
+    float: left;
+    margin-bottom: 10px;
+  }
+}
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
