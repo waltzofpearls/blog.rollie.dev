@@ -1,0 +1,9 @@
+$small-logo-size: 48px;
+$fixed-top-height: calc($small-logo-size + 2px);
+
+$screen-xs-max: 767px; // < 767px (xsmall phone)
+$screen-sm-min: 768px; // >= 768px (small tablet)
+$screen-sm-max: 991px; // < 991px (small tablet)
+$screen-md-min: 992px; // >= 992px (medium laptop)
+$screen-md-max: 1199px; // < 1199px (medium laptop)
+$screen-lg-min: 1200px; // >= 1200px (large desktop)

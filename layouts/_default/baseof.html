@@ -21,7 +21,10 @@
     <link rel="author" href="https://github.com/waltzofpearls">
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAAAAAAAAD/46v//9mM//fYoP/VqH3/0qJ1//LSof//2o7//Nud/9qxh//RoHD/3LeT/9Ojdf/VqHz/27SO/9Cfb//duZb//9mM///MYv/1yX3/xYhM/8GAQf/twX3//8xk//vOeP/MlFr/v3s6/8+cav/BgEL/xIdL/82XZP+/ezn/0J9v//fYoP/1yX3/8M2V/9Kic//PnGv/8c6a///Xhv/92pb/4LaD/9ilbP/hu5D/2alx/9utef/asIf/zZdk/9u0jv/VqHz/x4tQ/9Wnev/Lk13/x4xT/+7Hiv//0XL//9eI///ajv//0XP//92X///Uff//1H7/3rKA/8aKT//VqHz/1ah7/9W2mf/Sxrr/0qV6/8OESP/txIP//9Bs//ndo//f1cD/+96j/+7duv/n17j//uCk/9jLvP/VtJX/1KV5/+LAn//FurD/jI6P/+zVsP/uxIP/7Mqb/+O1ev/ey7L/jY+S/+XWwf+9tq7/qaik//rrz/+UlZb/08i2//XXqP/Yq3//wLGj/4iJi//226L//9Bq/+G0eP/AfT7/z7SZ/4uNj//Zwqz/tqyj/6eln//658H/kJCR/9bJrf//35f/4LuU/8O3qv+IiYv/9t6t///Wf//owpD/zZVg/9O8pf+LjY7/3Mm2/7evp/+npaD/+unJ/5CQkf/VybP//+Cl///hqP/OxLH/foCC/+zdvf//3ZP/5t3N/93Qw//by7v/hYaH/9zPw/+6s63/m5qY//ft2P+RkZH/ybqr/9+4kf//4Jr/0MWt/2prbf+koZz/9OPC/6yqpv+opKD/3s/C/3h4ef+ysK//t7W0/3Z2dv/U0s//j5CQ/8a0ov/Wp3r/9tir/83Etf+GiIn/oKGi/4yNkP96env/qqik/+Xcz/+Ki43/mZqc/3l6ev+bnJ3/jo+Q/31+f//Uw7L/37qX/9Smev/Us5P/2cu5//fjuf/XyrH/x8Cz/+bWtP/64rD/5Ne+/+3dvf/Mw7b/2sCn/8+8qv/Lv7P/0KBy/9KidP/VqHz/xolO/96xff//1H7//9aA///hoP//03j//9eH///Zi///03f/8M2U/8mOV//OmWX/1ql9/8WITP/VqHz/27SO/82XZP/asIf/2615/9mpcf/hu4//2KVs/+C2hP/92Zb//9eF//zcoP/1y4P/9c6J/962if/Nl2T/27SO/9Cfb/+/ezn/zZdk/8SHS//BgEL/z5xq/797Ov/MlFr/+854///LY///2In//85p///QcP/XpWv/vno4/9Cfb//duZb/0J9v/9u0jv/VqHz/06N1/9y3k//RoHD/2rGH//zbnf//2Y3//+Kp///akf//3Jf/4r2T/9Cebv/duZb/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/stylesheets/main.css">
+    {{ $options := dict "transpiler" "dartsass" "targetPath" "stylesheets/style.css" }}
+    {{ with resources.Get "scss/main.scss" | toCSS $options | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{ end }}
   </head>
   <body>
     <header>
