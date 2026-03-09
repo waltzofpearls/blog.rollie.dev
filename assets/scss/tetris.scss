@@ -1,19 +1,10 @@
 @use 'variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
 h1, h2, h3, h4 {
   a .badge {
     vertical-align: top;
   }
-}
-
-@font-face {
-  font-family: 'Consolas';
-  src: url('/fonts/consolas.eot');
-  src: url('/fonts/consolas-iefix.eot') format('embedded-opentype'),
-  url('/fonts/consolas.woff2') format('woff2'),
-  url('/fonts/consolas.woff') format('woff'),
-  url('/fonts/consolas.ttf') format('truetype'),
-  url('/fonts/consolas.svg') format('svg');
 }
 
 .small-logo-container {
@@ -47,7 +38,8 @@ h1, h2, h3, h4 {
   h1 {
     margin: 0;
     text-align: right;
-    font-family: Consolas, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'JetBrains Mono', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    letter-spacing: -0.02em;
 
     &.long { display: block; }
     &.medium { display: none; }
